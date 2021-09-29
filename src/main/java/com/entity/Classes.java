@@ -14,8 +14,10 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 
+
 @Entity
 public class Classes {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY )
 	@Column(name = "class_id")
@@ -60,6 +62,5 @@ public class Classes {
 		return "Classes [classId=" + classId + ", className=" + className + ", students=" + students + ", subjects="
 				+ subjects + "]";
 	}
-
 
 }

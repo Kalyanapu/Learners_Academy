@@ -13,7 +13,7 @@
 
 
 <div class="error">
-<h1 style="color: red"> Some Error has occurred, please try troubleshoot or contact the developer</h1>
+<h1 style="color: red"> Some Error has occurred, please try troubleshooting or contact the developer</h1>
 </div>
 
 

@@ -1,9 +1,9 @@
 package com.util;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
+import org.hibernate.service.ServiceRegistryBuilder;
 
 import com.entity.Classes;
 import com.entity.Student;
@@ -23,9 +23,10 @@ public class HibernateUtil {
 				 .addAnnotatedClass(Classes.class).addAnnotatedClass(Teacher.class)
 				 .addAnnotatedClass(Student.class).addAnnotatedClass(Subject.class);
 		 
-		 ServiceRegistry reg =new StandardServiceRegistryBuilder().applySettings(config.getProperties()).build();
-		 sessionFactory=config.buildSessionFactory(reg);
+		  
+		  ServiceRegistry reg = new ServiceRegistryBuilder().applySettings(config.getProperties()).buildServiceRegistry();
+		 sessionFactory = config.buildSessionFactory(reg);
 	   
-		return sessionFactory	;
+		return sessionFactory;
 	}
 }
